@@ -1,0 +1,4 @@
+// type centerx, centery, direction
+// available types: robot, pylon, tunnel, bridge, ramp, start, checkpoint, goal
+robot 200 200 0
+pylon 300 300 0.6

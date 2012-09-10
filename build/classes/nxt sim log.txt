@@ -1,0 +1,78 @@
+Janetka Bot Simulation for CS 2011 development log
+
+prerelease (March 20~, 2011 - just before spring break)
+overarching task: reorganize data structure
+description: frame-based program
+added:
+diaplay class
+improved:
+reorganized data struture
+redesigned engine
+difficulty: ***
+overall rating: *
+
+1.0 Beta (March 28, 2011 - Monday back from spring break)
+overarching task: robot math (trigonometry, physics), setup GUI
+added:
+draw grid
+frame rate controller
+scale controller
+camera
+improved:
+singlemotor
+TwoWheelNXT
+robot now draws itself
+difficulty: ******
+overall rating: **
+
+2.0 Beta (April 8, 2011 - Friday)
+overarching task: interpret information and present the information graphically
+added:
+"center" perspective
+"first-person" perspective
+draw compass
+draw map
+draw speed
+draw messaages
+draw grid
+improved:
+time-based robot
+difficulty: *****
+overall rating: *** (beginning to look cool)
+
+2.5 Beta (April 11, 2011 - Monday) DOCUMENTATION BEGINS
+overarching task: reorganize the program based on grid world model (transition from frame-based to engine-based, should have done it in the beginning)
+added:
+multikeylistener, more flexible key handling
+an interface to keep track of constants
+display run time
+improved:
+definition of simulation: base unit becomes the engine, not the frame. engine now updates the variables, renders the screen and keeps track of time. a frame is just a frame.
+draw map - precalculate map scale using scale factor; no runtime image scaling - much faster, smoother graphics
+draw grid - grid now covers 3 * compound size
+efficiency (speed)
+other:
+obsolete simulation frame in version 2.0; repackage to simulation
+difficulty: ****** (just because it is done too late)
+overall rating: ****
+
+3.0 Beta (April 12, 2011 - Tuesday)
+support file input; all objects are now mapped from a file "map.txt"
+added:
+file input
+keys/second controller
+bot's distance traveled
+SimpleMouseListener to Display. supports auto focus, get mouse coordinates etc
+improved:
+more organized in terms of file handling
+recoded TwoWheelNXT to initialize position and direction upon instantiation
+defined wheel diameter, width and acceleration as constants in TwoWheelNXT class
+corrected scale errors in drawGrid
+
+3.5 Beta
+added:
+float method to singlemotor. floating does not make the wheel spin but keep spinning at the speed designated
+minerva class bot: an intelligent bot that solves the maze automatically
+destroy class bot: a autonomous unit with the ability to shoot.
+TODO: implement destroy, minerva. implements obstacles. implement crude collision.
+last update: April 12, 2011
