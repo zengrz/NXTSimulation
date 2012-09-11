@@ -1,5 +1,5 @@
 package NXTBot;
 
 public interface Commandable {
-    public void handleCommand(int command);;;;;;
+    public void handleCommand(int command);
 }
