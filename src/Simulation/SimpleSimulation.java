@@ -109,7 +109,9 @@ public class SimpleSimulation extends Simulation implements SimulationConstants 
     @Override
     public void update() {        
         updateVariables();
-        if (stepcount%(getMaxFPS()/frame.getKPSValue()) == 0) processKeys();
+        if (stepcount%(getMaxFPS()/frame.getKPSValue()) == 0) {
+            processKeys();
+        }
         updateNXT();
     }
 
