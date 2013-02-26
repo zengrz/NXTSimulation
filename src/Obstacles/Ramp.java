@@ -11,7 +11,7 @@ import java.awt.Graphics2D;
  *
  * @author rey
  */
-public class Ramp extends Drawable {
+public class Ramp extends Structure {
 
     @Override
     public void paint(Graphics2D g) {

@@ -6,7 +6,7 @@
 package Simulation;
 
 import NXTBot.NXTBotFrame;
-import Obstacles.Drawable;
+import Obstacles.Structure;
 import Obstacles.Pylon;
 import java.awt.AlphaComposite;
 import java.awt.Color;
@@ -51,7 +51,7 @@ public class SimpleSimulation extends Simulation implements SimulationConstants 
         camX = camY = 0;
         stepcount = 0;
         // initialize bots
-        obstacles = new ArrayList<Drawable>();
+        obstacles = new ArrayList<Structure>();
         // initialize obstacles, from file
         initMap();
     }
@@ -186,7 +186,7 @@ public class SimpleSimulation extends Simulation implements SimulationConstants 
         g.setColor(Color.yellow);
         g.drawRect(0, 0, COMPOUND_WIDTH, COMPOUND_HEIGHT);
         // draw main objects
-        for (Drawable d: obstacles) {
+        for (Structure d: obstacles) {
             d.paint(g);
         }
         bot.paint(g);
@@ -298,7 +298,7 @@ public class SimpleSimulation extends Simulation implements SimulationConstants 
         // draw objects
         tempg.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1));
         tempg.setColor(Color.red);
-        for (Drawable d : obstacles) {
+        for (Structure d : obstacles) {
             tempg.fillRect((int)(d.getX() * mapScale), (int)(d.getY() * mapScale), (int)(d.getWidth() * mapScale), (int)(d.getHeight() * mapScale));
         }
         tempg.setColor(Color.white);
@@ -375,7 +375,7 @@ public class SimpleSimulation extends Simulation implements SimulationConstants 
     private double scaleFactor;
 
     private NXTBotFrame bot;
-    private ArrayList<Drawable> obstacles;
+    private ArrayList<Structure> obstacles;
     private MultiKeyListener keyMulti;
     private SimpleMouseListener mouseListnr;
     private SimulationFrame frame;

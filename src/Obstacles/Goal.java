@@ -11,7 +11,7 @@ import java.awt.Graphics2D;
  *
  * @author rey
  */
-public class Goal extends Drawable {
+public class Goal extends Structure {
 
     @Override
     public void paint(Graphics2D g) {

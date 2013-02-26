@@ -11,7 +11,7 @@ import java.awt.Graphics2D;
  *
  * @author rey z
  */
-public class Pylon extends Drawable {
+public class Pylon extends Structure {
 
     public Pylon(int x, int y, double direction) {
         super();

@@ -11,7 +11,7 @@ import java.awt.Graphics2D;
  *
  * @author rey
  */
-public class Start extends Drawable {
+public class Start extends Structure {
 
     @Override
     public void paint(Graphics2D g) {

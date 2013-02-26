@@ -11,7 +11,7 @@ import java.awt.Graphics2D;
  *
  * @author rey
  */
-public class Tunnel extends Drawable {
+public class Tunnel extends Structure {
 
     @Override
     public void paint(Graphics2D g) {

@@ -1,5 +1,6 @@
 package NXTBot;
 
+import BaseClasses.GameObject;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import java.awt.geom.Line2D;
@@ -21,7 +22,7 @@ import java.awt.geom.Line2D;
  * Must:
  * - handle keyboard command
  */
-public abstract class TwoWheelNXT implements Commandable {
+public abstract class TwoWheelNXT extends GameObject implements Commandable {
 
     public TwoWheelNXT(double x, double y, double angle) {
         this.axisLength = WIDTH;
@@ -178,7 +179,7 @@ public abstract class TwoWheelNXT implements Commandable {
         distanceTraveled += Math.sqrt(deltaX * deltaX + deltaY * deltaY);
         centerX = newCenterX;
         centerY = newCenterY;        
-        double length = Math.sqrt((posAX - posBX) * (posAX - posBX) + (posAY - posBY) * (posAY - posBY));
+        //double length = Math.sqrt((posAX - posBX) * (posAX - posBX) + (posAY - posBY) * (posAY - posBY));
         //System.out.println("centerX: " + centerX + " centerY: " + centerY + " - length:" + length);
     }
 

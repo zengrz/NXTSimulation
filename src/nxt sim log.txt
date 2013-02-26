@@ -71,8 +71,27 @@ corrected scale errors in drawGrid
 
 3.5 Beta
 added:
-float method to singlemotor. floating does not make the wheel spin but keep spinning at the speed designated
+float method to SingleMotor.java. floating does not make the wheel spin but keep spinning at the speed designated
 minerva class bot: an intelligent bot that solves the maze automatically
 destroy class bot: a autonomous unit with the ability to shoot.
 TODO: implement destroy, minerva. implements obstacles. implement crude collision.
 last update: April 12, 2011
+
+[Jan 17, 2013]
+Just put your shit together lol.
+Refactoring:
+Game structure
+All game objects (ie bots, structures, etc.) must extend unit.
+Model unit after GameObject in Unity.
+
+Game design / New Features
+Camera needs to be able to zoom in on any unit.
+Hotkey
+
+Interface
+Remove control strip from bottom. Game screen must occupy the entire window.
+Add toggle-able panels, tabs to contain the settings instead.
+
+Extensions
+Integrate JBox2D physics engine
+Integrate network elements (chat first, then multi-player)

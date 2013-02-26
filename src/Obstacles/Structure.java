@@ -5,6 +5,7 @@
 
 package Obstacles;
 
+import BaseClasses.GameObject;
 import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.awt.Point;
@@ -14,12 +15,12 @@ import java.awt.Rectangle;
  *
  * @author rey z
  */
-public abstract class Drawable {
+public abstract class Structure extends GameObject {
 
     /**
      * Reference to the parent container.
      */
-    protected Drawable parent;
+    protected Structure parent;
     /**
      * Boundary of the object.
      */
@@ -37,7 +38,7 @@ public abstract class Drawable {
     /**
      * Creates a <code>Displayable</code> that is visible with no parent at the coordinate of 0,0.
      */
-    public Drawable() {
+    public Structure() {
         parent = null;
         visible = true;
         bound = new Rectangle();
@@ -178,7 +179,7 @@ public abstract class Drawable {
      * Set the parent container.
      * @param p the parent container.
      */
-    public void setParent(Drawable p) {
+    public void setParent(Structure p) {
         parent = p;
     }
 
@@ -186,7 +187,7 @@ public abstract class Drawable {
      * Get the parent container.
      * @return the parent container.
      */
-    public final Drawable getParent() {
+    public final Structure getParent() {
         return parent;
     }
 

@@ -11,7 +11,7 @@ import java.awt.Graphics2D;
  *
  * @author 674265
  */
-public class CheckPoint extends Drawable {
+public class CheckPoint extends Structure {
 
     @Override
     public void paint(Graphics2D g) {
